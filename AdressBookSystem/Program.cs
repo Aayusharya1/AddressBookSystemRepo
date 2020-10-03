@@ -17,7 +17,7 @@ namespace AddressBookSystem
 
             while (flag == true)
             {
-                Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Exit.");
+                Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Delete Contact. \n4. exit");
 
                 int option = int.Parse(Console.ReadLine());
 
@@ -82,6 +82,20 @@ namespace AddressBookSystem
                         }
 
                     case 3:
+                        Console.WriteLine("Enter the first name of the contact to be deleted ");
+                        string name1 = Console.ReadLine();
+                        if (p.book.RemoveContact(name1))
+                        {
+                            Console.WriteLine("Contact removed successfully");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Contact not found");
+                            break;
+                        }
+
+                    case 4:
                         flag = false;
                         break;
                 }

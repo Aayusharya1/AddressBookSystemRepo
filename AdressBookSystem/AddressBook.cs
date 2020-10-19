@@ -4,9 +4,10 @@ using System.Text;
 
 namespace AddressBookSystem
 {
-    class AddressBook
+    public class AddressBook
     {
-        public static List<Contact> contactBook;
+       
+        public List<Contact> contactBook;
         public AddressBook()
         {
             contactBook = new List<Contact>();

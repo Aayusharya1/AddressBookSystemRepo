@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aayush Arya\\Desktop\\class assignments\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj": {}
+    "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aayush Arya\\Desktop\\class assignments\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj": {
+    "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aayush Arya\\Desktop\\class assignments\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj",
         "projectName": "AdressBookSystem",
-        "projectPath": "C:\\Users\\Aayush Arya\\Desktop\\class assignments\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj",
+        "projectPath": "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj",
         "packagesPath": "C:\\Users\\Aayush Arya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aayush Arya\\Desktop\\class assignments\\AdressBookSystem\\AdressBookSystem\\obj\\",
+        "outputPath": "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aayush Arya\\AppData\\Roaming\\NuGet\\NuGet.Config",

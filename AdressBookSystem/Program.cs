@@ -112,6 +112,17 @@ namespace AddressBookSystem
                 }
                 Console.WriteLine("enter 1 to insert another book and 0 otherwise...");
                 AnotherBook = Convert.ToInt32(Console.ReadLine());
+                if (AnotherBook == 1) Console.WriteLine("Enter the name of the address book..........");
+
+            }
+
+            foreach(var k in binder.Binder.Keys)
+            {
+                Console.WriteLine(k);
+                foreach(Contact c in binder.Binder[k])
+                {
+                    Console.WriteLine(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
+                }
 
             }
         

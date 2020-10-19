@@ -7,15 +7,25 @@ namespace AddressBookSystem
     public class AddressBook
     {
        
-        public List<Contact> contactBook;
+        public HashSet<Contact> contactBook;
         public AddressBook()
         {
-            contactBook = new List<Contact>();
+            contactBook = new HashSet<Contact>();
         }
 
         public Contact FindContact(string fname)
         {
-            Contact contact = contactBook.Find((x) => x.firstName == fname);
+            Contact contact = null;
+            foreach(var x in contactBook) 
+            {
+                if (x.firstName == fname) 
+                {
+                    contact = x;
+                    break;
+                }
+
+                
+            }
             return contact;
         }
 

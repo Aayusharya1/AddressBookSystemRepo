@@ -24,22 +24,40 @@ namespace AddressBookSystem
             }
         }
 
-        public List<Contact> SortByCity(string cityname)
+        public List<string> DistinctCities()
         {
+            List<string> City = new List<string>();
             foreach (var key in Binder.Keys)
             {
                 foreach (Contact c in Binder[key])
                 {
-                    if (c.city == cityname)
-                        City.Add(c);
+                    if (City.Contains(c.city))
+                        break;
+                    else
+                        City.Add(c.city);
                 }
             }
             return City;
         }
-        public List<Contact> SearchContactsByCity(string city)
+        public void CreateDictionary()
         {
-            CityDictionary[city] = SortByCity(city);
-            return CityDictionary[city];
+            List<string> City1 = DistinctCities();
+            foreach (string city in City1)
+            {
+                List<Contact> CityContact = new List<Contact>();
+                foreach (var key in Binder.Keys)
+                {
+                    foreach (Contact c in Binder[key])
+                    {
+                        if (c.city == city)
+                            CityContact.Add(c);
+                    }
+                }
+                if (this.CityDictionary.ContainsKey(city))
+                    CityDictionary[city] = CityContact;
+                else
+                    CityDictionary.Add(city, CityContact);
+            }
         }
     }
 }

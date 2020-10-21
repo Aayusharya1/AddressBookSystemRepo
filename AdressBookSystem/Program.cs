@@ -24,7 +24,7 @@ namespace AddressBookSystem
 
                 while (flag == 1)
                 {
-                    Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Delete Contact. \n4 Search by city. \n5. exit");
+                    Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Delete Contact. \n4 Search by city. \n5.Count by City. \n6 exit");
 
                     int option = int.Parse(Console.ReadLine());
 
@@ -104,13 +104,19 @@ namespace AddressBookSystem
                         case 4:
                             Console.WriteLine("Enter the city whose contact list is needed.");
                             string City = Console.ReadLine();
-                            foreach (Contact co in binder.SearchContactsByCity(City)) 
+                            foreach (Contact co in binder.CityDictionary[City]) 
                             {
                                 Console.WriteLine(co.firstName + "\t" + co.lastName + "\t" + co.city + "\t" + co.state + "\t" + co.zip + "\t" + co.phoneNumber);
                             }
                             break;
 
                         case 5:
+                            foreach (var key in binder.CityDictionary.Keys)
+                            {
+                                Console.WriteLine(key + "\t" + binder.CityDictionary[key].Count);
+                            }
+                            break;
+                        case 6:
                             flag = 0;
                             break;
                     }

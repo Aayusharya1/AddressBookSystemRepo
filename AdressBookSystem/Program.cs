@@ -24,7 +24,7 @@ namespace AddressBookSystem
 
                 while (flag == 1)
                 {
-                    Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Delete Contact. \n4 Search by city. \n5.Count by City. \n6 exit");
+                    Console.WriteLine("Select the option. \n1. for adding new contact. \n2. To edit existing contact. \n3. Delete Contact. \n4 Search by city. \n5.Count by City. \n6 print alphabetically \n7 exit.");
 
                     int option = int.Parse(Console.ReadLine());
 
@@ -116,7 +116,11 @@ namespace AddressBookSystem
                                 Console.WriteLine(key + "\t" + binder.CityDictionary[key].Count);
                             }
                             break;
+
                         case 6:
+                            book.AlphabeticallyArrange();
+                            break;
+                        case 7:
                             flag = 0;
                             break;
                     }

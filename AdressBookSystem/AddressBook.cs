@@ -6,7 +6,7 @@ namespace AddressBookSystem
 {
     public class AddressBook
     {
-       
+
         public HashSet<Contact> contactBook;
         public AddressBook()
         {
@@ -16,15 +16,15 @@ namespace AddressBookSystem
         public Contact FindContact(string fname)
         {
             Contact contact = null;
-            foreach(var x in contactBook) 
+            foreach (var x in contactBook)
             {
-                if (x.firstName == fname) 
+                if (x.firstName == fname)
                 {
                     contact = x;
                     break;
                 }
 
-                
+
             }
             return contact;
         }
@@ -55,6 +55,20 @@ namespace AddressBookSystem
                 return false;
             }
 
+        }
+        public void AlphabeticallyArrange()
+        {
+            List<string> alphabeticalList = new List<string>();
+            foreach (Contact c in contactBook)
+            {
+                string sort = c.ToString();
+                alphabeticalList.Add(sort);
+            }
+            alphabeticalList.Sort();
+            foreach (string s in alphabeticalList)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }

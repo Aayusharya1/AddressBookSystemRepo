@@ -5,7 +5,7 @@ namespace AddressBookSystem
 {
     class Program
     {
-
+        public static List<string> data = new List<string>();
         static void Main(string[] args)
         {
 
@@ -134,7 +134,9 @@ namespace AddressBookSystem
                             flag = 0;
                             break;
                     }
-                    
+
+                    binder.Binder[BookName] = (book.contactBook);
+
 
                 }
                 Console.WriteLine("enter 1 to insert another book and 0 otherwise...");
@@ -152,8 +154,24 @@ namespace AddressBookSystem
                 }
 
             }
-        
-        
+
+            foreach (var key in binder.Binder.Keys)
+            {
+                data.Add(key);
+                Console.WriteLine("..................");
+                foreach (Contact c in binder.Binder[key])
+                {
+                    data.Add(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
+                    Console.WriteLine(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
+
+                }
+            }
+            Console.WriteLine("...............");
+            Console.WriteLine("Writing contacts in file");
+            FileOperations.WriteUsingStreamWriter(data);
+            FileOperations.ReadFromStreamReader();
+
+
         }
     }
 }

@@ -170,7 +170,8 @@ namespace AddressBookSystem
             Console.WriteLine("Writing contacts in file");
             FileOperations.WriteUsingStreamWriter(data);
             FileOperations.ReadFromStreamReader();
-
+            FileOperations.ImplementCSVDataHandling();
+            FileOperations.WriteCSVFile(data);
 
         }
     }

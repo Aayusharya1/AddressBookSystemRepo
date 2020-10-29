@@ -1,6 +1,9 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace AddressBookSystem
@@ -47,5 +50,39 @@ namespace AddressBookSystem
                 Console.WriteLine("No file");
             }
         }
+
+        public static void ImplementCSVDataHandling()
+        {
+            string filePath = @"C:\Users\Aayush Arya\source\repos\AdressBookSystem\AdressBookSystem\ContactFilesFolder\Contacts.csv";
+            using (var reader = new StreamReader(filePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var records = csv.GetRecords<Contact>().ToList();
+                Console.WriteLine("Data Reading done successfully from Contact.csv file");
+                foreach (Contact contact in records)
+                {
+                    Console.Write("\t" + contact.firstName);
+                    Console.Write("\t" + contact.lastName);
+                    Console.Write("\t" + contact.address);
+                    Console.Write("\t" + contact.city);
+                    Console.Write("\t" + contact.state);
+                    Console.Write("\t" + contact.zip);
+                    Console.Write("\t" + contact.phoneNumber);
+                    Console.Write("\t" + contact.email);
+                    Console.Write("\n");
+                }
+            }
+        }
+        public static void WriteCSVFile(List<string> data)
+        {
+            string filePath = @"C:\Users\Aayush Arya\source\repos\AdressBookSystem\AdressBookSystem\ContactFilesFolder\Contacts.csv";
+            using (var writer = new StreamWriter(filePath))
+            using (var csvWrite = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                Console.WriteLine("Data Writing done successfully from Contact.csv file");
+                csvWrite.WriteRecord(data);
+            }
+        }
     }
 }
+    

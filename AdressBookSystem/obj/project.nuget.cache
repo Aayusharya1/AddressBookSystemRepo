@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZkePMFHJ+bFlIoqwWDz3h59SLkRiPVFeoZxexJMlAwRau9YKXSbBfkNgTf4FoRhq1XH3OILBCvLnZV/icKZ4mg==",
+  "dgSpecHash": "l6kD4wLhOaqpw2+dvt0wBIJp+T/LzsID0B+XUSASYTguEFZp4odk73f0nCWZxPtTa1g2B99Z91MDOUJMVzy08w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Aayush Arya\\source\\repos\\AdressBookSystem\\AdressBookSystem\\AdressBookSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aayush Arya\\.nuget\\packages\\csvhelper\\15.0.8\\csvhelper.15.0.8.nupkg.sha512",
-    "C:\\Users\\Aayush Arya\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+    "C:\\Users\\Aayush Arya\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Aayush Arya\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -150,6 +150,7 @@ namespace AddressBookSystem
                 Console.WriteLine(k);
                 foreach(Contact c in binder.Binder[k])
                 {
+                    Console.WriteLine(c.ToString());
                     Console.WriteLine(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
                 }
 
@@ -161,17 +162,20 @@ namespace AddressBookSystem
                 Console.WriteLine("..................");
                 foreach (Contact c in binder.Binder[key])
                 {
-                    data.Add(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
-                    Console.WriteLine(c.firstName + "\t" + c.lastName + "\t" + c.city + "\t" + c.state + "\t" + c.zip + "\t" + c.phoneNumber);
+                    data.Add(c.ToString());
+                    Console.WriteLine(c.ToString());
 
                 }
             }
             Console.WriteLine("...............");
             Console.WriteLine("Writing contacts in file");
-            FileOperations.WriteUsingStreamWriter(data);
-            FileOperations.ReadFromStreamReader();
+            //FileOperations.WriteUsingStreamWriter(data);
+            //FileOperations.ReadFromStreamReader();
             FileOperations.ImplementCSVDataHandling();
             FileOperations.WriteCSVFile(data);
+            FileOperations.WriteToJsonFile(data);
+            FileOperations.ReadJsonFile();
+
 
         }
     }
